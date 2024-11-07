@@ -1,0 +1,84 @@
+/* Reset and Basic Styling */
+  
+  /* Main Wrapper */
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333; /* Adds a dark background to highlight the container */
+  }
+  
+  /* App Container */
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 360px;
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* Header */
+  .header {
+    width: 360px;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #A40F11;
+    color: white;
+  }
+  
+  .header img{
+    margin-top: 15px;
+    width: 165px;
+    height: 48px;
+  }
+  
+  .header .icons {
+    display: flex;
+    gap: 15px;
+  }
+   
+  .header .icon {
+    width: 19px;
+    height: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+   
+  /* Main Content */
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  .content h2{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  /* Bottom Navigation */
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: white;
+    border-top: 1px solid white;
+  }
+  
+  .nav-icon {
+    font-size: 1.5em;
+    width: 22px;
+    height: 25px;
+    cursor: pointer;
+    color: #95989A;
+  }
+  
+  
