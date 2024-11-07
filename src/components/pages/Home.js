@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import home from "../../images/home.png";
 import "../../styling/Page_1.css";
-function Page_1() {
+function Home() {
   const [properties, setProperties] = useState([]);
   const [show, setShow] = useState(false);
   const [alert, setAlert] = useState(false);
@@ -117,4 +117,4 @@ function Page_1() {
   );
 }
 
-export default Page_1;
+export default Home;

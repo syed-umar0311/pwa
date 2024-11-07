@@ -33,8 +33,9 @@ body {
 h2 {
   margin-top: 0;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 750;
   color: #333;
+  padding-bottom: 20px;
 }
 
 .input-group {
@@ -111,14 +112,17 @@ h2 {
   border: 1px solid #ddd;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
   background-color: white;
   transition: border 0.3s;
+  font-weight: bold;
+  color: #4D5051;
 }
 
 .google-login img {
-  width: 20px;
-  margin-right: 10px;
+  width: 33px;
+  height: 31px;
+  margin-right: 15px;
 }
 
 .google-login:hover {
@@ -148,4 +152,10 @@ h2 {
   .input-group input {
     padding: 10px 35px 10px 12px;
   }
+}
+.login-image {
+  display: block;
+  margin: 0 auto 10px; 
+  width: 228px;
+  height: 190px;
 }
