@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import home from "../../images/home.png";
-import "../../styling/Page_1.css";
+import "../../styling/Home.css";
 function Home() {
   const [properties, setProperties] = useState([]);
   const [show, setShow] = useState(false);
