@@ -10,7 +10,6 @@ import { BsFilterLeft } from "react-icons/bs";
 function Footer() {
   const location = useLocation();
 
-  // Helper function to check if the path is active
   const isActive = (path) => location.pathname === path;
 
   return (
