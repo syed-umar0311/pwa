@@ -5,7 +5,7 @@ import "../Home/Home.css";
 function Home() {
   const [properties, setProperties] = useState([]);
   const [show, setShow] = useState(false);
-  const [alert, setAlert] = useState(false);
+  // const [alert, setAlert] = useState(false);
   const [property, setProperty] = useState({
     number: "",
     address: "",
@@ -22,25 +22,25 @@ function Home() {
       setProperties([...properties, property]);
       setProperty({ number: "", address: "", city: "" }); // Reset the input fields
       setShow(!show);
-      setAlert(true);
+      // setAlert(true);
 
-      setTimeout(() => {
-        setAlert(false);
-      }, 3000);
+      // setTimeout(() => {
+      //   setAlert(false);
+      // }, 3000);
     }
   };
 
   return (
     <>
-      {alert ? (
+      {/* {alert ? (
         <div className="alert alert-primary" role="alert">
-          Add Successfully
+        Add Successfully
         </div>
-      ) : (
-        ""
-      )}
-      <div className="main">
-        <div className="container">
+        ) : (
+          ""
+          )} */}
+      <div className="homemain">
+        <div className="homecontainer">
           <h2 className="heading-main">Select Property</h2>
           <h2 className="heading-secondary">Property List</h2>
           <ul className="property-list">
@@ -66,26 +66,26 @@ function Home() {
 
           <h2 className="property-overview-heading">Property Overview</h2>
           <div className="property-overview">
-            <div>Total Properties</div>
+          <h6>Total Properties</h6>
             <div className="property-count">{properties.length}</div>
           </div>
 
           <button
-            className="btn btn-danger btn-block btn-add-new"
+            className="add-button"
             onClick={() => setShow(!show)}
           >
             Add New
           </button>
 
           {show && (
-            <div className="form-container">
+            <div className="form">
               <input
                 type="text"
                 name="number"
                 placeholder="Property Number"
                 value={property.number}
                 onChange={handleChange}
-                className="form-control mb-2"
+                className="input-field"
               />
               <input
                 type="text"
@@ -93,7 +93,7 @@ function Home() {
                 placeholder="Address"
                 value={property.address}
                 onChange={handleChange}
-                className="form-control mb-2"
+                className="input-field"
               />
               <input
                 type="text"
@@ -101,11 +101,11 @@ function Home() {
                 placeholder="City"
                 value={property.city}
                 onChange={handleChange}
-                className="form-control mb-2"
+                className="input-field"
               />
               <button
                 onClick={handleAddProperty}
-                className="btn btn-primary btn-block form-button"
+                className="add-button button"
               >
                 Add
               </button>
