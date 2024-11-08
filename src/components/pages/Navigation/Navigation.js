@@ -12,20 +12,20 @@ import { BsFilterLeft } from "react-icons/bs";
 
 function Navigation() {
   return (
-    <div className="main">
-      <div className="app">
+    <div className="navmain">
+      <div className="appbox">
         {/* Header */}
-        <header className="header">
-          <img src={navlogo} alt="Logo" className="logo" />{" "}
+        <header className="navheader">
+          <img src={navlogo} alt="Logo" className="navlogo" />{" "}
           {/* Add the image */}
-          <div className="icons">
-            <img src={vector} alt="bell" className="icon" />
-            <img src={Menu} alt="nav" className="icon" />
+          <div className="navicons">
+            <img src={vector} alt="bell" className="navicon" />
+            <img src={Menu} alt="nav" className="navicon" />
           </div>
         </header>
 
         {/* Main Content */}
-        <main className="content">
+        <main className="navcontent">
           <h2>Seasonal Checklist</h2>
         </main>
 
