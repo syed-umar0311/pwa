@@ -14,8 +14,8 @@ function Footer() {
 
   return (
     <footer className="bottom-nav">
-      <Link to="/filter">
-        <BsFilterLeft className="nav-icon" style={{ color: isActive('/filter') ? 'red' : 'black' }} />
+      <Link to="/Explore">
+        <BsFilterLeft className="nav-icon" style={{ color: isActive('/Explore') ? 'red' : 'black' }} />
       </Link>
       <Link to="/check">
         <CiSquareCheck className="nav-icon" style={{ color: isActive('/check') ? 'red' : 'black' }} />
@@ -26,8 +26,8 @@ function Footer() {
       <Link to="/cart">
         <RiShoppingBag3Line className="nav-icon" style={{ color: isActive('/cart') ? 'red' : 'black' }} />
       </Link>
-      <Link to="/login">
-        <FiUser className="nav-icon" style={{ color: isActive('/login') ? 'red' : 'black' }} />
+      <Link to="/user">
+        <FiUser className="nav-icon" style={{ color: isActive('/user') ? 'red' : 'black' }} />
       </Link>
     </footer>
   );

@@ -2,15 +2,14 @@ import React from 'react'
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import "../Navigation/Navigation.css";
-
-function Filter() {
+function Explore() {
   return (
     <>
     <div className="navmain">
       <div className="appbox">
         <Header />
         <main className="navcontent">
-          <h2>FILTER</h2>
+          <h2>Explore</h2>
         </main>
         <Footer />
       </div>
@@ -19,4 +18,4 @@ function Filter() {
   )
 }
 
-export default Filter
+export default Explore;
