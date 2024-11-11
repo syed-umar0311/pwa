@@ -1,11 +1,10 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import home from "../../../images/home.png";
 import "../AddProperty/AddProperty.css";
+
 function AddProperty() {
   const [properties, setProperties] = useState([]);
   const [show, setShow] = useState(false);
-  // const [alert, setAlert] = useState(false);
   const [property, setProperty] = useState({
     number: "",
     address: "",
@@ -17,28 +16,34 @@ function AddProperty() {
     setProperty({ ...property, [name]: value });
   };
 
-  const handleAddProperty = () => {
+  const handleAddProperty = async () => {
     if (property.number && property.address && property.city) {
-      setProperties([...properties, property]);
-      setProperty({ number: "", address: "", city: "" }); // Reset the input fields
-      setShow(!show);
-      // setAlert(true);
+      // Send property data to the server
+      try {
+        const response = await fetch("https://your-database-api-endpoint.com/properties", { // replace with your API endpoint
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(property),
+        });
 
-      // setTimeout(() => {
-      //   setAlert(false);
-      // }, 3000);
+        if (response.ok) {
+          const savedProperty = await response.json();
+          setProperties([...properties, savedProperty]);
+          setProperty({ number: "", address: "", city: "" });
+          setShow(!show);
+        } else {
+          console.error("Failed to add property:", response.status);
+        }
+      } catch (error) {
+        console.error("Error adding property:", error);
+      }
     }
   };
 
   return (
     <>
-      {/* {alert ? (
-        <div className="alert alert-primary" role="alert">
-        Add Successfully
-        </div>
-        ) : (
-          ""
-          )} */}
       <div className="homemain">
         <div className="homecontainer">
           <h2 className="heading-main">Select Property</h2>
@@ -66,14 +71,11 @@ function AddProperty() {
 
           <h2 className="property-overview-heading">Property Overview</h2>
           <div className="property-overview">
-          <h6>Total Properties</h6>
+            <h6>Total Properties</h6>
             <div className="property-count">{properties.length}</div>
           </div>
 
-          <button
-            className="add-button"
-            onClick={() => setShow(!show)}
-          >
+          <button className="add-button" onClick={() => setShow(!show)}>
             Add New
           </button>
 
@@ -103,10 +105,7 @@ function AddProperty() {
                 onChange={handleChange}
                 className="input-field"
               />
-              <button
-                onClick={handleAddProperty}
-                className="add-button button"
-              >
+              <button onClick={handleAddProperty} className="add-button button">
                 Add
               </button>
             </div>
