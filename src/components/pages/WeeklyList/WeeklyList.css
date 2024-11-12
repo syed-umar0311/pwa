@@ -1,0 +1,20 @@
+.main-week{
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    margin: 20px;
+    
+}
+.in-week{
+    width: 94%;
+    height: 60px;
+    border: 2px solid white;
+    background-color: #b71c1c;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+}
