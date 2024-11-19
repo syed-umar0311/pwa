@@ -1,8 +1,11 @@
 // src/Login.js
 import React, { useState } from "react";
-import "../auth/Login.css";
-import logo from "../../components/assets/images/logo.png";
+import "../auth/signup.css";
 import google from "../../components/assets/images/google.png";
+import facebook from '../assets/images/facebook.png'
+import apple from '../assets/images/apple.png'
+import { Link } from "react-router-dom";
+
 import { FaEnvelope, FaLock } from "react-icons/fa";
 
 function Login() {
@@ -50,14 +53,37 @@ function Login() {
   return (
     <div className="login-container">
       <div className="login-box">
-        <img src={logo} alt="Login Graphic" className="login-image" />
+        <div className="top"></div>
         <h2>Sign Up</h2>
+        <p>Your properties, managed in one place. Sign Up Now!</p>
+        <div className="multi-buttons">
+          <button className="login-multi">
+            <img src={google} alt="Google Icon" />
+          </button>
+          <button className="login-multi">
+            <img src={facebook} alt="Google Icon" />
+          </button>
+          <button className="login-multi">
+            <img src={apple} alt="Google Icon" />
+          </button>
+        </div>
         <form onSubmit={handleSignUp}>
           <div className="input-group">
             <FaEnvelope className="icon" />
             <input
               type="text"
-              placeholder="Username or Email"
+              placeholder="Full Name"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="input-group">
+            <FaEnvelope className="icon" />
+            <input
+              type="text"
+              placeholder="Email ID"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -77,7 +103,7 @@ function Login() {
             <FaLock className="icon" />
             <input
               type="password"
-              placeholder="Confirm Password"
+              placeholder="Reset Password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
@@ -90,11 +116,10 @@ function Login() {
 
         {message && <p className="message">{message}</p>}
 
-        <div className="separator">- OR -</div>
-        <button className="google-login">
-          <img src={google} alt="Google Icon" />
-          Sign Up with Google
-        </button>
+        <div className="signup-link">
+          Do you have an account
+          <Link to="/login">Login</Link>
+        </div>
       </div>
     </div>
   );

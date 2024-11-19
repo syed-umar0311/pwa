@@ -1,63 +1,83 @@
 /* src/Login.css */
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-}
-
 .login-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f7f7f7;
+  background-color: transparent;
   padding: 20px;
 }
 
 .login-box {
   max-width: 360px;
   width: 100%;
-  padding: 40px 20px;
-  background: white;
+  padding: 0 20px;
+  background: transparent;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-
-.logo {
-  width: 80px;
-  margin-bottom: 20px;
+.top{
+  justify-self: center;
+  width: 320px;
+  height: 96px;
+  background-color: #A40F11;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius:10px ;
 }
 
-h2 {
+
+.login-box h2 {
+  justify-self: start;
   font-family: "prompt", sans-serif;
-  margin-top: 0;
+  margin-top: 35px;
   font-size: 1.4rem;
   font-weight: 600;
   color: #333;
-  padding-bottom: 20px;
+  
+}
+.login-box p{
+  text-align: start;
+  font-family: "plus jakarta sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+
 }
 
 .input-group {
   position: relative;
   margin-bottom: 20px;
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 .input-group input {
   width: 100%;
   padding: 12px 15px 12px 45px; /* Adjusted left padding to make room for the icon */
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 14px;
   border: 1px solid #ddd;
-  outline: none;
-  transition: border 0.3s;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  padding: 0px;
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+  align-self: start;
+  justify-self: center;
+  background-color: #666;  
+}
+.check{
+  margin: 0px;
+  padding: 0px;
+  text-align: start;
+  font-size: 12px;
 }
 
 
-.input-group input:focus {
-  border: 1px solid #b71c1c;
-}
 
 .icon {
   position: absolute;
@@ -65,7 +85,7 @@ h2 {
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.2rem;
-  color: #888;
+  color: #A40F11;
 }
 
 .login-btn {
@@ -99,7 +119,7 @@ h2 {
 }
 
 .separator {
-  margin: 20px 0;
+  margin: 8px 0 0 8px;
   color: #999;
   font-size: 0.9rem;
 }
@@ -113,20 +133,26 @@ h2 {
   border: 1px solid #ddd;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-family: "plus jakarta sans", sans-serif;
+  font-size: 14px;
   background-color: white;
   transition: border 0.3s;
-  font-weight: bold;
+  font-weight: 400;
   color: #4D5051;
+  margin-top: 10px;
 }
 
 .google-login img {
-  width: 33px;
-  height: 31px;
+  width: 30px;
+  height: 30px;
   margin-right: 15px;
 }
 
 .google-login:hover {
   border-color: #888;
 }
-
+.buttons{
+  width: 100%;
+  height: 100px;
+background-color: transparent;
+}

@@ -1,8 +1,9 @@
 // src/Login.js
 import React, { useState } from "react";
 import "../../components/auth/Login.css";
-import logo from '../../components/assets/images/logo.png';
-import google from '../../components/assets/images/google.png';
+import google from "../../components/assets/images/google.png";
+import facebook from '../assets/images/facebook.png'
+import apple from '../assets/images/apple.png'
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -45,8 +46,9 @@ function Login() {
   return (
     <div className="login-container">
       <div className="login-box">
-        <img src={logo} alt="Login Graphic" className="login-image" />
+        <div className="top"></div>
         <h2>Login</h2>
+        <p>Your properties, managed in one place. Welcome Back!</p>
         <form onSubmit={handleLogin}>
           <div className="input-group">
             <FaEnvelope className="icon" />
@@ -68,20 +70,37 @@ function Login() {
               required
             />
           </div>
-          <button type="submit" className="login-btn">Login</button>
+          <div className="check">
+            <label>
+              <input type="checkbox" />I agree to the Terms of Service and
+              Privacy Policy
+            </label>
+          </div>
+          <button type="submit" className="login-btn">
+            Login
+          </button>
         </form>
 
         {message && <p className="message">{message}</p>}
 
-        <div className="signup-link">
-          New here? 
-          <Link to="/signup">Signup</Link>
-        </div>
         <div className="separator">- OR -</div>
         <button className="google-login">
           <img src={google} alt="Google Icon" />
-          Log In with Google
+          Google
         </button>
+        <button className="google-login">
+          <img src={facebook} alt="Google Icon" />
+          Facebook
+        </button>
+        <button className="google-login">
+          <img src={apple} alt="Google Icon" />
+          Apple ID
+        </button>
+        
+        <div className="signup-link">
+          New here?
+          <Link to="/signup">Signup</Link>
+        </div>
       </div>
     </div>
   );
