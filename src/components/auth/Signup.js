@@ -1,8 +1,8 @@
 // src/Login.js
 import React, { useState } from "react";
 import "../auth/Login.css";
-import logo from "../../images/logo.png";
-import google from "../../images/google.png";
+import logo from "../../components/assets/images/logo.png";
+import google from "../../components/assets/images/google.png";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 
 function Login() {

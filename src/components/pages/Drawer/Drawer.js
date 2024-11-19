@@ -1,6 +1,6 @@
 import React from "react";
 import "../Drawer/Drawer.css";
-import user from "../../../images/user.png";
+import user from "../../../components/assets/images/user.png";
 import { MdInbox } from "react-icons/md";
 import { RxDashboard } from "react-icons/rx";
 import { IoMdNotificationsOutline } from "react-icons/io";

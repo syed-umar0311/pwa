@@ -1,8 +1,8 @@
 import React from 'react'
 import '../Header/Header.css'
-import Menu from "../../../images/Menu.png";
-import vector from "../../../images/Vector.png";
-import navlogo from "../../../images/navlogo.png";
+import Menu from "../../../components/assets/images/Menu.png";
+import vector from "../../../components/assets/images/Vector.png";
+import navlogo from "../../../components/assets/images/navlogo.png";
 
 function Header() {
   return (
