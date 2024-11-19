@@ -1,0 +1,40 @@
+.button {
+    background-color: transparent;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .login {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    align-self: center;
+    width: 237px;
+    height: 54px;
+    background-color: #a40f11;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    color: white;
+  }
+  .signup {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    outline: none; /* Removes the default outline when focused */
+    box-shadow: none;
+  
+    color: #a40f11;
+    border-radius: 14px;
+    align-self: center;
+    width: 237px;
+    height: 54px;
+    background-color: white;
+    color: #a40f11;
+    /* border-color: #a40f11; */
+    border: 1px solid #a40f11;
+  }
+  

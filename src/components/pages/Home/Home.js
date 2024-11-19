@@ -1,42 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../Home/Home.css'
-import { useState, useEffect } from 'react';
 function Home() {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  const fetchData = async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const response = await fetch('https://api.example.com/data'); // Replace with your API endpoint
-
-      if (response.ok) { // Check for 200 status code
-        const data = await response.json();
-        setData(data);
-      } else if (response.status === 400) {
-        setError('Bad Request (400): The server could not understand the request.');
-      } else if (response.status === 401) {
-        setError('Unauthorized (401): Authentication is required or has failed.');
-      } else if (response.status === 500) {
-        setError('Server Error (500): An internal server error has occurred.');
-      } else {
-        setError(`Unexpected Error (${response.status}): ${response.statusText}`);
-      }
-    } catch (err) {
-      setError(`Network Error: ${err.message}`);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
   return (
-    <div>Home</div>
+<>
+<div className='main'>
+  <div className='content'>
+    <div className='image'></div>
+    <h1>Let's Get Started</h1>
+    <p>Organize, track, and manage all 
+    your properties in one seamless app.</p>
+    <div className='button'>
+    <Link to="/login"> <button className='login'>Login</button></Link>
+    <Link to="/signup"> <button className='signup'>Sign Up</button></Link>
+    </div>
+  </div>
+
+</div>
+</>
   )
 }
 

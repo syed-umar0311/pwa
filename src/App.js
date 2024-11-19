@@ -14,15 +14,15 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Navigation/>} />
+          <Route path="/" element={<Home />} />
           <Route path="/user" element={<User/>} />
           <Route path="/login" element={<Login />} />
+          <Route path="/Navigation" element={<Navigation/>} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/check" element={<Check />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/AddProperty" element={<AddProperty />} />
-          <Route path="/Home" element={<Home />} />
 
 
         </Routes>
