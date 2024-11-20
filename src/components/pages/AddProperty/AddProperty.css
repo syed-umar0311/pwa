@@ -11,9 +11,10 @@
   .homecontainer {
     overflow: hidden;
     width: 100%;
-    max-width: 360px;
-    height: 615px;
-    border-radius: 12px;
+    max-width: 370px;
+    height: 100vh;
+    border-radius: 10px;
+    gap: 40px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 10px;
   }
@@ -29,83 +30,20 @@
   
   .heading-secondary {
     margin-top: 20px;
-    font-family: "Prompt", sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-  }
-  
-  .property-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .property-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .property-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .property-icon {
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
-    border-radius: 50%;
-  }
-  
-  .property-name {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    margin: 3px 0 0 0;
-  }
-  
-  .property-address {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: grey;
-    margin: 0;
-  }
-  
-  .property-overview-heading {
-    padding: 0 0 8px 0;
-    margin: 20px 0 0 0;
-    font-size: 16px;
-    font-weight: 650;
-    font-family: "prompt", sans-serif;
-  }
-  
-  .property-overview {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
     margin-bottom: 20px;
-  }
-  .property-overview h2{
+    font-family: "Prompt", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
     color: grey;
-    font-family: "prompt", sans-serif;
-
   }
   
-  .property-count {
-    font-size: 22px;
-    font-weight:500;
-    height: 80px;
-  }
   
   .add-button {
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 300;
+    font-size: 14px;
     font-family: 'Prompt', sans-serif;
     line-height: 30.24px;
-    text-align: center;
+    text-align: start;
     width: 340px;
     height: 50px;
     padding: 10px 15px;

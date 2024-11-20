@@ -8,13 +8,13 @@ import Login from "../src/components/auth/Login";
 import Signup from "../src/components/auth/Signup";
 import AddProperty from "./components/pages/AddProperty/AddProperty";
 import User from '../src/components/pages/User/User'
-import Home from "./components/pages/Home/Home";
+// import Home from "./components/pages/Home/Home";
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<AddProperty/>} />
           <Route path="/user" element={<User/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/Navigation" element={<Navigation/>} />
