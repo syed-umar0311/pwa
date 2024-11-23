@@ -17,7 +17,8 @@
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
-  background-color: grey;
+  background-image: url("../../assets/images/map.jpg");
+  background-size: cover;
 }
 .edit {
   gap: 35px;
@@ -39,8 +40,8 @@
     padding: 0px;
     margin: 0px;
   display: flex;
-  justify-content: space-evenly;
-  /* gap: 30px; */
+  justify-content: center;
+  gap: 12px;
   align-items: center;
   flex-direction: row;
   width: 340px;
@@ -51,18 +52,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: -10px 0 0 0;
+  margin: 2px 0 0 0;
   padding: 0px;
+  height: 50px;
 }
 .icon {
+  color: rgba(164, 15, 17, 1);
   width: 70px;
   height: 70px;
   padding: 22px;
   background-color: transparent;
-  border-radius: 12px;
-  top: 40%;
+  border-radius: 8px;
   margin: 0px;
-  outline: 0.5px solid black;
+  border: 2px solid #dfdfdf;
 }
 .edit h2 {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -72,25 +74,39 @@
 }
 .state h1 {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 700;
+font-size: 14px;
+font-weight: 700;
+line-height: 17.64px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
   color: black;
   font-size: 15px;
-  line-height: 17.64px;
   align-self: start;
 }
 .state h4{
-    font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
   color: #303030;
-  font-size: 14px;
   line-height: 17.64px;
   width: 200px;
 }
 .edit-address{
-    font-weight: 400;
-    font-size: 15px;
-    font-family: 'plus jakarta sans', sans-serif;
-    line-height: 15.12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.16px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  
     width: 340px;
     height: 100px;
     border-radius: 14px;
@@ -99,29 +115,42 @@
     border: none;
 }
 .search-top{
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 4px;
+  gap: 12px;
+  height: 50px;
 }
 .src-button{
   height: 45px;
   width: 45px;
   border-radius: 12px;
   background-color: #F9F9F9;
-  border: none;
-  outline: 0.5px solid black;
+  border: 2px solid #dfdfdf;
 }
-.search-top input[type=text]{
-  height: 45px;
-  width: 280px;
-  border-radius: 12px;
+.input-src input[type="text"] {
+  
   border: none;
-  background-color: #F9F9F9;
-  outline: 0.5px solid black;
+  text-decoration: none;
+  display: inline;
+  background-color: transparent;
+  text-align: start;
+  width: 100px;
+  margin: 0px;
+  color: black;
+  font-weight: 300;
+}
+
+.input-src{
+  height: 45px;
+  width: 270px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  border: 2px solid #dfdfdf;
 
 }
+
 /* -------------------------------- */
 .save::-webkit-scrollbar {
   width: 2px; /* Adjust scrollbar width */
@@ -171,7 +200,7 @@
   width: 80px;
   height: 40px;
   border: none;
-  outline: 0.5px solid black;
+  border: 2px solid #dfdfdf;
 }
 .save h3{
   font-size: 16px;
@@ -181,8 +210,7 @@
 input[type="text"]{
   width: 300px;
   border-radius: 8px;
-  border: none;
-  outline: 0.2px solid black;
+  border: 2px solid #dfdfdf;
 }
 /* ---------------------------------------------- */
 .address-form {

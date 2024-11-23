@@ -1,9 +1,9 @@
 // src/Login.js
 import React, { useState } from "react";
-import "../../components/auth/Login.css";
-import google from "../../components/assets/images/google.png";
-import facebook from '../assets/images/facebook.png'
-import apple from '../assets/images/apple.png'
+import "../login/Login.css";
+import google from "../../assets/images/google.png";
+import facebook from '../../assets/images/facebook.png'
+import apple from '../../assets/images/apple.png'
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import { Link } from "react-router-dom";
 

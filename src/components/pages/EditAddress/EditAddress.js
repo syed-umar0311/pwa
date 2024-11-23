@@ -3,18 +3,13 @@ import "../EditAddress/EditAddress.css";
 import { useLocation } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoChevronBack } from "react-icons/io5";
+import { CiSearch } from "react-icons/ci";
+
 // import SaveAddress from "../SaveAddress/SaveAddress";
 function EditAddress() {
   const location = useLocation();
   const [edit, setedit] = useState(true);
   const address = location.state;
-  // const address = {
-  //   id: 1,
-  //   state: "New South Wales",
-  //   abbreviation: "NSW",
-  //   postcode: "2114",
-  //   fullAddress: "1 Example St, New South Wales, 2114",
-  // };
   const save = () => {
     setedit(false);
   };
@@ -28,7 +23,18 @@ function EditAddress() {
                 <button className="src-button">
                   <IoChevronBack />
                 </button>
-                <input type="text" placeholder="Search.." />
+                <div className="input-src">
+                  <CiSearch
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      color: "grey",
+                      padding: "2px",
+                      marginBottom: "4px",
+                    }}
+                  />
+                  <input type="text" placeholder="Search" />
+                </div>
               </div>
               <div className="edit">
                 {address ? (
@@ -64,7 +70,18 @@ function EditAddress() {
                 <button className="src-button">
                   <IoChevronBack />
                 </button>
-                <input type="text" placeholder="Search.." />
+                <div className="input-src">
+                <CiSearch
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      color: "grey",
+                      padding: "2px",
+                      marginBottom: "4px",
+                    }}
+                  />
+                 
+                <input type="text" placeholder="Search.." /></div>
               </div>
 
               <div className="save">

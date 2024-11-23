@@ -14,8 +14,8 @@
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
-  background-color: grey;
-}
+  background-image: url("../../assets/images/map.jpg");
+  background-size: cover;}
 .search {
   gap: 50px;
   padding: 20px;
@@ -59,9 +59,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 12px;
   width: 100%;
-  height: 60px;
+  height: 50px;
   background-color: white;
 }
 .src-button {
@@ -69,21 +69,34 @@
   width: 45px;
   border-radius: 12px;
   background-color: #f9f9f9;
-  border: none;
-  outline: 0.5px solid black;
+  border: 2px solid #dfdfdf;
 }
-.in-search input[type="text"] {
+.input-src input[type="text"] {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  display: inline;
+  background-color: transparent;
+  text-align: start;
+  width: 100px;
+  /* color: black; */
+  font-weight: 300;
+  height: 40px;
+}
+
+.input-src{
   height: 45px;
   width: 270px;
   border-radius: 12px;
-  border: none;
   background-color: #f9f9f9;
-  outline: 0.5px solid black;
+  border: 2px solid #dfdfdf;
+
 }
 .address-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .address-item {

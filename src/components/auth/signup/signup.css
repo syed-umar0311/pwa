@@ -45,22 +45,22 @@
   
   }
   
-  .input-group {
+  /* .input-group {
     position: relative;
     margin-bottom: 20px;
     border-radius: 14px;
     overflow: hidden;
   }
-  
-  .input-group input {
+   */
+  /* .input-group input {
     width: 100%;
-    padding: 12px 15px 12px 45px; /* Adjusted left padding to make room for the icon */
+    padding: 12px 15px 12px 45px; 
     font-size: 1rem;
     border-radius: 14px;
     border: 1px solid #ddd;
     box-sizing: border-box;
   }
-  
+   */
   input[type="checkbox"] {
     padding: 0px;
     width: 20px;
@@ -79,7 +79,7 @@
   
   
   
-  .icon {
+  /* .icon {
     position: absolute;
     left: 15px;
     top: 50%;
@@ -87,7 +87,7 @@
     font-size: 1.2rem;
     color: #A40F11;
   }
-  
+   */
   .login-btn {
     width: 100%;
     padding: 12px;

@@ -5,6 +5,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
 import groups from '../../assets/images/Group.png';
+import { CiSearch } from "react-icons/ci";
+
 
 function Search() {
   const [isActive, setIsActive] = useState(false);
@@ -22,21 +24,30 @@ function Search() {
   const handleItemClick = (address) => {
     navigate('/editaddress', { state: address });
   };
+  const act = ()=>{
+    if (isActive) {
+      setIsActive(false)
+    }
+    else {
+      navigate("/")
+    }
+  }
 
   return (
     <div className="main">
       <div className="container">
         <div className={`search ${isActive ? 'active' : ''}`}>
           <div className="in-search">
-            <button className="src-button" onClick={() => setIsActive(false)}>
+            <button className="src-button" onClick={act}>
               <IoChevronBack />
             </button>
+            <div className='input-src'>
+            <CiSearch style={{width:"30px", height:"30px", color:"grey",padding:"2px", marginBottom:"4px"}}/>
             <input
               type="text"
               placeholder="Search.."
               onFocus={() => setIsActive(true)}
-              // onBlur={() => setIsActive(false)}
-            />
+            /></div>
           </div>
           {!isActive && <img src={groups} alt="group" />}
           {!isActive && <h2>Use my Current Location</h2>}
@@ -55,7 +66,7 @@ function Search() {
                   className="address-item"
                   onClick={() => handleItemClick(address)}
                 >
-                  <FaLocationDot />
+                  <FaLocationDot style={{color:"#A40F11"}} />
                   <span>
                     {address.state} ({address.abbreviation}), {address.postcode}
                   </span>
