@@ -21,7 +21,7 @@
   
   .heading-main {
     font-family: "prompt", sans-serif;
-    margin-top: 80px;
+    margin-top: 35px;
     font-size: 22px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
@@ -29,6 +29,7 @@
   }
   
   .heading-secondary {
+    width: 280px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-family: "Prompt", sans-serif;
@@ -39,10 +40,10 @@
   
   
   .add-button {
-    font-weight: 300;
+    font-weight: 500;
     font-size: 14px;
-    font-family: 'Prompt', sans-serif;
-    line-height: 30.24px;
+    font-family: 'plus jakarta sans', sans-serif;
+    line-height: 15.12px;
     text-align: start;
     width: 340px;
     height: 50px;
@@ -65,3 +66,17 @@
     width: 330px;
     margin: 3px;
   }
+  @media screen and (max-width: 450px) and (min-width: 330px) {
+    
+    .add-button {
+      width: 100%;
+      height: 45px; 
+      padding: 8px 10px;
+    }
+  
+    .input-field {
+      width: 100%; 
+      margin: 5px 0; 
+    }
+  }
+  

@@ -1,7 +1,15 @@
 import React from "react";
 import "../AddProperty/AddProperty.css";
+import { FiPlus } from "react-icons/fi";
+import { useNavigate } from 'react-router-dom';
+
+
 
 function AddProperty() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/search'); // Navigate to the 'About' page
+  };
   
   return (
     <>
@@ -13,8 +21,8 @@ function AddProperty() {
          
 
           
-          <button className="add-button">
-            +  Add New Property
+          <button className="add-button"  onClick={handleClick}>
+            <FiPlus style={{fontSize:"16px", color:"white", marginBottom:"2px"}}/> Add New Property
           </button>
 
           
