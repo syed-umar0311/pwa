@@ -16,10 +16,11 @@ function App() {
     <>
       <Router>
         <Routes>
+          <Route path="/" element={<AddProperty/>} />
           <Route path="/editaddress" element={<EditAddress/>} />
           <Route path="/search" element={<Search/>} />
           <Route path="/home" element={<Home/>} />
-          <Route path="/addproperty" element={<AddProperty/>} />
+          {/* <Route path="/addproperty" element={<AddProperty/>} /> */}
           <Route path="/user" element={<User/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/Navigation" element={<Navigation/>} />
@@ -27,10 +28,6 @@ function App() {
           <Route path="/cart" element={<Cart/>} />
           <Route path="/check" element={<Check/>} />
           <Route path="/explore" element={<Explore/>} />
-          <Route path="/" element={<AddProperty/>} />
-          
-
-
         </Routes>
       </Router>
     </>

@@ -35,7 +35,7 @@ function Search() {
               type="text"
               placeholder="Search.."
               onFocus={() => setIsActive(true)}
-              onBlur={() => setIsActive(false)}
+              // onBlur={() => setIsActive(false)}
             />
           </div>
           {!isActive && <img src={groups} alt="group" />}
