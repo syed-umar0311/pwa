@@ -16,7 +16,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<EditAddress/>} />
+          <Route path="/editaddress" element={<EditAddress/>} />
           <Route path="/search" element={<Search/>} />
           <Route path="/home" element={<Home/>} />
           <Route path="/addproperty" element={<AddProperty/>} />
@@ -27,7 +27,7 @@ function App() {
           <Route path="/cart" element={<Cart/>} />
           <Route path="/check" element={<Check/>} />
           <Route path="/explore" element={<Explore/>} />
-          <Route path="/AddProperty" element={<AddProperty/>} />
+          <Route path="/" element={<AddProperty/>} />
           
 
 
