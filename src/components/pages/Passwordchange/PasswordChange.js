@@ -1,23 +1,17 @@
-// src/Login.js
 import React, { useState } from "react";
-import "../signup/signup.css";
-import '../login/Login.css'
-import google from "../../assets/images/google.png";
-import facebook from '../../assets/images/facebook.png'
-import apple from '../../assets/images/apple.png'
+import "../../auth/login/Login.css";
+import logo from "../../assets/images/logo.png";
+import { FaEnvelope, FaLock } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import { FaEnvelope, FaLock } from "react-icons/fa";
-
-function Login() {
+function PasswordChange() {
   // // State to manage form inputs and response messages
-  // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
   // const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
 
   // // Handler for form submission
-  // const handleSignUp = async (e) => {
+  // const handlePassword = async (e) => {
   //   e.preventDefault();
 
   //   // Check if passwords match
@@ -54,20 +48,9 @@ function Login() {
   return (
     <div className="login-container">
       <div className="login-box">
-        <div className="top"></div>
-        <h2>Sign Up</h2>
-        <p>Your properties, managed in one place. Sign Up Now!</p>
-        <div className="multi-buttons">
-          <button className="login-multi">
-            <img src={google} alt="Google Icon" />
-          </button>
-          <button className="login-multi">
-            <img src={facebook} alt="Google Icon" />
-          </button>
-          <button className="login-multi">
-            <img src={apple} alt="Google Icon" />
-          </button>
-        </div>
+        <img src={logo} alt="Login Graphic" className="login-image" />
+        <h2>Create New Password</h2>
+        <p>Update your password for enchanced account security</p>
         <form >
         <div className="input-container">
             {/* Email Input */}
@@ -75,52 +58,29 @@ function Login() {
               <FaEnvelope
                 style={{ color: "#A40F11", width: "20px", height: "20px" }}
               />
-              <input type="email" placeholder="Full Name" className="input-field" />
-            </div>
-            <div className="input-wrapper">
-              <FaEnvelope
-                style={{ color: "#A40F11", width: "20px", height: "20px" }}
-              />
-              <input type="email" placeholder="Email ID" className="input-field" />
+              <input type="email" placeholder="New Password" className="input-field" />
             </div>
 
-            {/* Password Input */}
             <div className="input-wrapper">
               <FaLock
                 style={{ color: "#A40F11", width: "20px", height: "20px" }}
               />
               <input
                 type="password"
-                placeholder="Password"
+                placeholder=" Confirm Password"
                 className="input-field"
               />
             </div>
-            <div className="input-wrapper">
-              <FaLock
-                style={{ color: "#A40F11", width: "20px", height: "20px" }}
-              />
-              <input
-                type="password"
-                placeholder=" Repeat Password"
-                className="input-field"
-              />
             </div>
-          </div>{" "}
-          <button type="submit" className="login-btn">
-            Sign Up
-          </button>
+        <Link to="/login">  <button type="submit" className="login-btn">
+            Change Password
+          </button></Link>
         </form>
-        <div className="separator">- OR -</div>
 
         {message && <p className="message">{message}</p>}
-
-        <div className="signup-link">
-          Do you have an account
-          <Link to="/login">Login</Link>
-        </div>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default PasswordChange

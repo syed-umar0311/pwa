@@ -11,13 +11,15 @@ import User from '../src/components/pages/User/User'
 import Search from "./components/pages/Search/Search";
 import Home from "./components/pages/Home/Home";
 import EditAddress from "./components/pages/EditAddress/EditAddress";
+import PasswordChange from '../src/components/pages/Passwordchange/PasswordChange'
 function App() {
   return (
     <>
       <Router>
         <Routes>
+        <Route path="/passwordchange" element={<PasswordChange/>} />
           <Route path="/login" element={<Login/>} />
-          <Route path="/" element={<AddProperty/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/editaddress" element={<EditAddress/>} />
           <Route path="/search" element={<Search/>} />
           <Route path="/home" element={<Home/>} />
@@ -26,7 +28,8 @@ function App() {
           <Route path="/signup" element={<Signup/>} />
           <Route path="/cart" element={<Cart/>} />
           <Route path="/check" element={<Check/>} />
-          <Route path="/explore" element={<Explore/>} />
+          <Route path="/explore" element={<Explore/>} />         
+          <Route path="/addproperty" element={<AddProperty/>} />
         </Routes>
       </Router>
     </>

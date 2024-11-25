@@ -21,7 +21,7 @@
 .top{
   justify-self: center;
   width: 320px;
-  height: 96px;
+  height: 140px;
   background-color: #A40F11;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius:10px ;
@@ -44,13 +44,82 @@
   font-size: 15px;
 
 }
-
 /* .input-group {
   position: relative;
   margin-bottom: 20px;
   border-radius: 14px;
   overflow: hidden;
 } */
+/* .input-groups{
+  width: 327px;
+  height: 49px;
+  background-color: #999;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.input-groups input[type="texts"]{
+  background-color: transparent;
+  width: 80%;
+  padding: 12px 15px 12px 45px;
+  font-size: 1rem;
+  border-radius: 14px;
+  outline: none; */
+  /* box-sizing: border-box; */
+
+/* } */
+/* .input-groups input[type="passwords"]{
+  width: 80%;
+  padding: 12px 15px 12px 45px;
+  font-size: 1rem;
+  border-radius: 14px;
+  box-sizing: border-box;
+  background-color: transparent;
+} */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background-color: #ebebeb;
+}
+
+.input-field {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+}
+
+.icon {
+  color: #c62828; /* Dark red */
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.forgot-link {
+  position: absolute;
+  right: 15px;
+  font-size: 14px;
+  color: #c62828; /* Dark red */
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.input-wrapper:hover {
+  border-color: #b71c1c; /* Slightly darker red */
+}
 
 /* .input-group input {
   width: 100%;
